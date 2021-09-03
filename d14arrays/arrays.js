@@ -4,7 +4,8 @@
 */ 
 module.exports = {maxOfThree, sum, multiply, 
                   findLongestWord, reverseArray, 
-                  reverseArrayInPlace, scoreExams}; //add all of your function names here that you need for the node mocha tests
+                  reverseArrayInPlace, scoreExams,
+                  generateArray}; //add all of your function names here that you need for the node mocha tests
 
 /**
  * 
@@ -130,4 +131,22 @@ function scoreExams(studentAnswers, correctAnswers){
         count = 0;   
     }    
 return arr;
+}
+
+/**
+ * 
+ * @param {number} num1 is an integer
+ * @param {number} num2 s an integer
+ * @returns {Array} two dimentional array
+ */
+function generateArray(num1, num2) {
+    let arr1 = [];
+    let arr2 = [];
+    let arr3 = [1,2,3,4,5,6,7,8,9];
+    for (let i = 0;i < num1; i++) {
+        arr2 = arr3.splice(0,num2);
+        arr1.push(arr2);
+        arr2 = [];
+    }
+return arr1;
 }

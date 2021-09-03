@@ -12,7 +12,7 @@ Comment these out when you send it to the browser with the index.html mocha setu
 // const reverseArray = myExports.reverseArray;
 // const reverseArrayInPlace = myExports.reverseArrayInPlace;
 // const scoreExams = myExports.scoreExams;
-
+// const generateArray = myExports.generateArray;
 /* global assert maxOfThree sum multiply findLongestWord reverseArray reverseArrayInPlace scoreExams generateArray */
 
 /* 1.	1.	Define a function maxOfThree() that takes three numbers as arguments and returns the largest of them.  */
