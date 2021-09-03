@@ -8,7 +8,10 @@ const myExports = require("./arrays.js");  //with node need the name of your fil
 const maxOfThree = myExports.maxOfThree;  //do this for all of the functions used in the Mocha tests
 const multiply = myExports.multiply;
 const sum = myExports.sum;
-
+const findLongestWord = myExports.findLongestWord;
+const reverseArray = myExports.reverseArray;
+const reverseArrayInPlace = myExports.reverseArrayInPlace;
+const scoreExams = myExports.scoreExams;
 
 /* global assert maxOfThree sum multiply findLongestWord reverseArray reverseArrayInPlace scoreExams generateArray */
 
