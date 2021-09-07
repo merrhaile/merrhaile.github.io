@@ -1,6 +1,7 @@
 "use strict";
 /* You need the module.exports when testing in node.  Comment it out when you send your file to the browser */
-module.exports = {findTitles, findAuthors, findIDs,addBook, showTitles, showAuthors, showIDS }; //add all of your function names here that you need for the node mocha tests
+module.exports = {findTitles, findAuthors, findIDs,addBook, 
+                 showTitles, showAuthors, showIDS, scramble }; //add all of your function names here that you need for the node mocha tests
 
 
 let library = [
@@ -107,4 +108,46 @@ function addBook(){
 
     library.push(book);
     return book; 
+}
+
+/**
+ * 
+ * @returns {Objects} sorted array of splited titles
+ */
+function splitTitle(){
+    let allTitles = findTitles();
+    let arr = [];
+    let arr2 = [];
+
+    for(const title of allTitles){
+        arr.push(title.split(" "));
+    }
+
+    for(let i = 0; i < arr.length; i++){
+        for(let j = 0; j < arr[i].length; j++){
+            arr2.push(arr[i][j]);
+        }
+    }
+return arr2.sort((a,b) => a.length - b.length);
+}
+
+/**
+ * * Event handler to display scrambled words
+ * @returns {undefined}
+ */
+function scramble() {
+    let scrambelWords = splitTitle();
+    let wordSize = 1;
+    let samesizeString = "";
+    for(let i = 0; i < scrambelWords.length; i++){
+        if (scrambelWords[i].length > wordSize) {
+            samesizeString +=  " \n" ;
+        }
+        samesizeString += scrambelWords[i] + " ";
+        wordSize = scrambelWords[i].length;
+    }
+
+    let textArea = document.getElementById("displayArea");
+    textArea.innerHTML = samesizeString;
+
 }
