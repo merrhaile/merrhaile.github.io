@@ -5,11 +5,13 @@
 module.exports = { ucFirst,checkSpam, truncate ,extractCurrencyValue, getMaxSubSum, camelize}; //add all of your function names here that you need for the node mocha tests
 
 
+//Write a function ucFirst(str) that returns the string str with the uppercased first character, for instance:
 /**
  * 
  * @param {string} str is any string
  * @returns {string} string
  */
+
 function ucFirst(str) {
     let str1;
     if(str !== ""){
@@ -20,6 +22,7 @@ function ucFirst(str) {
     }
 }
 
+//Write a function checkSpam(str) that returns true if str contains ‘viagra’ or ‘XXX’, otherwise false.
 /**
  * 
  * @param {string} str is any string
@@ -30,6 +33,9 @@ function checkSpam(str) {
     return strLower.includes("viagra") || strLower.includes("xxxxx")
 }
 
+//Create a function truncate(str, maxlength) that checks the length of the str and, 
+//if it exceeds maxlength – replaces the end of str with the ellipsis character "…", 
+//to make its length equal to maxlength.
 /**
  * 
  * @param {string} str is any string
@@ -45,6 +51,9 @@ function truncate(str, maxlength) {
     return strTrunc;
 }
 
+//We have a cost in the form "$120". That is: the dollar sign goes first, 
+//and then the number. Create a function extractCurrencyValue(str) that 
+//would extract the numeric value from such string and return it.
 /**
  * 
  * @param {string} str is any string
@@ -64,7 +73,6 @@ function extractCurrencyValue(str){
  * 
  * @param {Array} arr of numbers
  * @returns {number} the total of the maximal subarray
- 
  */
 function getMaxSubSum(arr) {
    let sum = 0;

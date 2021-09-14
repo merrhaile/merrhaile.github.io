@@ -33,7 +33,7 @@ bank.saveTransaction = function (id, amount) {
 bank.debit = function (id, amount) {
     /* make sure current balance is > amount */
     const balance = this.getBalance(id);
-    if (balance.balance > amount) {
+    if (balance > amount) {
         this.saveTransaction(id, -amount);
     } 
    

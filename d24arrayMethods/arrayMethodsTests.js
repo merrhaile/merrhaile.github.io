@@ -77,6 +77,7 @@ describe("Calculator", function () {
     });
 });
 
+
 /* Create a function unique(arr) that should return an array with unique items of arr. */
 describe("unique", function () {
     let strings = ["Hare", "Krishna", "Hare", "Krishna",

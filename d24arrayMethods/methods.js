@@ -5,6 +5,9 @@ module.exports = { groupById, unique, filterRangeInPlace, filterRange, Calculato
                     userNames, userMapped, sortByAge, getAverageAge}; //add all of your function names here that you need for the node mocha tests
 
 
+// Write a function filterRange(arr, a, b) that gets an array arr, looks for elements
+// with values higher or equal to a and lower or equal to b and return a result as an array.
+
 /**
  * 
  * @param {Array} arr is an array of numbers
@@ -18,7 +21,10 @@ function filterRange(arr, a, b) {
     return subArr;
 }
 
- /**
+//Write a function filterRangeInPlace(arr, a, b) that gets an array arr and removes 
+//from it all values except those that are between a and b. The test is: a ≤ arr[i] ≤ b.
+// The function should only modify the array. It should not return anything. 
+/**
   * 
   * @param {Array} arr is an array of numbers
   * @param {Number} a is an integer
@@ -32,7 +38,16 @@ function filterRangeInPlace(arr, a, b) {
         }
      });
 }
- 
+
+//Create a constructor function Calculator that creates “extendable” calculator objects.
+//The task consists of two parts.
+//First, implement the method calculate(str) that takes a string like "1 + 2" in the 
+//format “NUMBER operator NUMBER” (space-delimited) and returns the result. 
+//Should understand plus + and minus -.
+
+// Then add the method addMethod(name, func) that teaches the calculator a new operation. 
+//It takes the operator name and the two-argument function func(a,b) that implements it.
+//For instance, let’s add the multiplication *, division / and power **:
 
 /**
  * @returns {Calculator} constructor function
@@ -54,6 +69,8 @@ function Calculator() {
      };
 }
 
+//You have an array of user objects, each one has user.name. Write the code 
+//that converts it into an array of names.
 /**
  * 
  * @param {Array} arr is an array of objects
@@ -66,6 +83,10 @@ function userNames(arr){
     }
     return arrUsers;
  }
+
+//You have an array of user objects, each one has name, surname and id.
+//Write the code to create another array from it, of objects with id and fullName, 
+//where fullName is generated from name and surname.
 
 
  /**
