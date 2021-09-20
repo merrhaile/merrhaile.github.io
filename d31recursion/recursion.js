@@ -3,7 +3,7 @@
 /* global exports */
 /* You need the module.exports when testing in node.  Comment it out when you send your file to the browser 
 */
-module.exports = { sumTo, factorial, fibonacci} // outputList, outputListLoop, reverseList, reverseListLoop}; //add all of your function names here that you need for the node mocha tests
+module.exports = { sumTo, factorial, fibonacci, outputList, outputListLoop, reverseList, reverseListLoop}; //add all of your function names here that you need for the node mocha tests
 
 /**
  * 
@@ -31,6 +31,7 @@ function factorial(num) {
     }
 }
 
+
 /**
  * 
  * @param {Number} num is an integer
@@ -43,6 +44,61 @@ function fibonacci(num) {
         return fibonacci(num - 1) + fibonacci(num - 2);
     }
 }
+
+/**
+ * 
+ * @param {Object} list is a linkedlist
+ * @returns {undefined} prints out list value loop version
+ */
+function outputListLoop (list){
+    let arr = [];
+    while(list){
+        arr.push(list.value);
+        list = list.next;
+    }
+    return arr.join(" ") + " printed to console";
+}
+
+/**
+ * 
+ * @param {Object} list is a linkedlist
+ * @returns {undefined} prints out list value recursion version
+ */
+ function outputList (list){
+    arr1.push(list.value);
+    list = list.next;
+    if(list) outputList(list);
+    return arr1.join(" ") + " printed to console";
+}
+const arr1 = [];
+
+/**
+ * 
+ * @param {Object} list is a linkedlist
+ * @returns {undefined} prints out reverse values of list loop version
+ */
+function reverseListLoop (list){
+    let arr = [];
+    while(list){
+        arr.unshift(list.value);
+        list = list.next;
+    }
+    return arr.join(" ") + " printed to console";
+}
+
+/**
+ * 
+ * @param {Object} list is a linkedlist
+ * @returns {undefined} prints out reverse values of list recursion version
+ */
+function reverseList(list){   
+    arr.unshift(list.value);
+    list = list.next;
+    if(list) reverseList(list);
+
+    return arr.join(" ") + " printed to console";
+}
+const arr = [];
 
 /**
  * 
