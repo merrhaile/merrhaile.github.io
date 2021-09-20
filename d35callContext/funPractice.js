@@ -64,3 +64,15 @@ function myFilter(arr, func){
        return previous;
 }
  
+/**
+ * 
+ * @param {String} name is a string
+ * @param {string} value is string
+ * @param  {...any} args is an array of children nodes
+ * @returns {undefined} it is a constructor function
+ */
+function TreeNode(name, value, ...args) {  
+    this.name = name;
+    this.value = value;
+    this.chldren = [...args];
+}
