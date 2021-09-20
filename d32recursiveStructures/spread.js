@@ -51,11 +51,14 @@ function combineObjs(obj1, obj2){
  * @returns {undefined} it logs names in the tree
  */
  function logSimpsNames(tree){
-    console.log(tree.value);
-    if (tree.descendents !== null){
-        for(const subtree of  Object.values(tree.descendents)){
+    if (tree.descendents === null){
+        console.log(tree.value);
+    }
+    else {
+        for(const subtree of  tree.descendents){
             logSimpsNames(subtree);
         }
+        console.log(tree.value);
     }
 }
 
@@ -68,11 +71,11 @@ function combineObjs(obj1, obj2){
 function checkTargetName(tree, target){
     if(tree.value === target) {
         return true;
-     } 
-    else if (tree.descendents !== null){
-        for(const subtree of  Object.values(tree.descendents)){
-           if(checkTargetName(subtree, target)) return true;
-        }
+    } else {
+        for(const subtree of  tree.descendents){
+           const result = checkTargetName(subtree, target);
+           if(result) return true;
+        }   
     }
     return false;
 }
@@ -86,11 +89,10 @@ function checkTargetName(tree, target){
 function findSubtree(tree, target){
     if(tree.value === target) {
         return tree;
-     } 
-    else if (tree.descendents !== null){
-        for(const subtree of  Object.values(tree.descendents)){
-           if(findSubtree(subtree, target)) return subtree;
-           else return null;
+    } else {
+        for(const subtree of tree.descendents){
+        const result = findSubtree(subtree, target);
+        if(result) return subtree;
         }
     }
     return null;
@@ -126,13 +128,15 @@ function findListNode(list, target){
   * @returns {String} modified value of the tree
   */
 function treeModifier(tree, modifierFunc){
-    if(tree !== null){
-        return modifierFunc(tree.value);
+    if(tree.next !== null){
+        tree.value = modifierFunc(tree.value);
     }else {
-        for(const subtree of  Object.values(tree.descendents)){
-            treeModifier(subtree, modifierFunc);
+        for(const subtree of Object.values(tree)){
+          treeModifier(subtree, modifierFunc);
+          
         }
     }
+    return tree;
 }
 
 /**
