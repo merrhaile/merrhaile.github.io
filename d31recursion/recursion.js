@@ -59,6 +59,7 @@ function outputListLoop (list){
     return arr.join(" ") + " printed to console";
 }
 
+const arr1 = [];
 /**
  * 
  * @param {Object} list is a linkedlist
@@ -70,7 +71,7 @@ function outputListLoop (list){
     if(list) outputList(list);
     return arr1.join(" ") + " printed to console";
 }
-const arr1 = [];
+
 
 /**
  * 
@@ -86,6 +87,7 @@ function reverseListLoop (list){
     return arr.join(" ") + " printed to console";
 }
 
+const arr = [];
 /**
  * 
  * @param {Object} list is a linkedlist
@@ -98,7 +100,7 @@ function reverseList(list){
 
     return arr.join(" ") + " printed to console";
 }
-const arr = [];
+
 
 /**
  * 
