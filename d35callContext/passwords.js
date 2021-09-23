@@ -44,16 +44,6 @@ let user2 = {
     }
 };
   
-/**
- * 
- * @param {String} password is a string
- * @returns {Function} execute either of the functions after testing the condition
- */
-function askPassword3(password) {
-    if (password === "rockstar") return this.loginOk();
-    else return this.loginFail();
-}
-
 
 let group = {
     title: "Our Group",
@@ -63,7 +53,7 @@ let group = {
     console.log(this.title + ": " + student)); 
     }
 }; 
-group.showList();
+// group.showList();
 
 let group1 = {
     title: "Our Group",
@@ -75,10 +65,10 @@ let group1 = {
 }
 }; 
 
-group1.showList();
+// group1.showList();
 
 
 
 
 
-module.exports = { askPassword, askPassword2, askPassword3, user, user2 }; 
+module.exports = { askPassword, askPassword2, user, user2 }; 
