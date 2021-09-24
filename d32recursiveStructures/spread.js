@@ -69,14 +69,13 @@ function combineObjs(obj1, obj2){
  * @returns {Boolean} it returns true if target name equals the tree.value
  */
 function checkTargetName(tree, target){
-    if(tree.value === target) {
-        return true;
-    } else {
-        for(const subtree of  tree.descendents){
-           const result = checkTargetName(subtree, target);
-           if(result) return true;
-        }   
-    }
+    if(tree.descendents !== null) {
+        if(tree.value === target) return true;
+    } 
+    for(const subtree of  tree.descendents){
+      const result =  checkTargetName(subtree, target);
+        if(result) return true;
+    }   
     return false;
 }
 
@@ -128,14 +127,13 @@ function findListNode(list, target){
   * @returns {String} modified value of the tree
   */
 function treeModifier(tree, modifierFunc){
-    if(tree.next !== null){
+    if(tree.next!== null){
         tree.value = modifierFunc(tree.value);
-    }else {
-        for(const subtree of Object.values(tree)){
-          treeModifier(subtree, modifierFunc);
-          
-        }
     }
+        for(const subtree of tree.descendents){
+         treeModifier(subtree, modifierFunc);
+        }
+    
     return tree;
 }
 
@@ -178,7 +176,7 @@ function reverseNode(str){
 function treeCollector(tree){
     NODE_VALUES.push(tree.value);
     if (tree.descendents !== null) {
-        for(const subtree of  Object.values(tree.descendents)){
+        for(const subtree of tree.descendents){
             treeCollector(subtree);
         }
     }
