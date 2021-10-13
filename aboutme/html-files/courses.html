@@ -3,25 +3,35 @@
 <head>
     <script src="../scripts/courses.js"></script>
     <link rel="stylesheet" href="../css-files/courses.css"/>
+    <link rel="stylesheet" href="../css-files/all.min.css"/>
     <title>Courses</title>
 </head>
 <body>
     <div id="mainDiv">
         <div class="headerDiv">
             <div class="headerDivchild">
-                <button class="tab" id="homeTab">Home</button> 
+                <button class="tab" id="homeTab" title="HOME">
+                    <i class="fas fa-2x fa-home"></i>
+                </button> 
             </div>
             <div class="headerDivchild">
-                <button class="tab" id="aboutTab" >About</button>
+                <button class="tab" id="aboutTab"title="ABOUT" >
+                    <i class="fas fa-2x fa-user"></i>
+                </button>
             </div>
             <div class="headerDivchild">
-                <button class="tab" id="projectsTab">Project</button>
+                <button class="tab" id="coursesTab" title="COURSES">
+                    <i class="fas fa-2x fa-graduation-cap"></i>
+                </button>
             </div>
             <div class="headerDivchild">
-                <button class="tab" id="coursesTab">Courses</button>
+                <button class="tab" id="projectsTab" title="PROJECTS">
+                    <i class="fas fa-2x fa-project-diagram"></i>
+                </button>
             </div>
+
             <div class="headerDivchild">
-                <button class="tab" id=""></button>
+                <button class="tab" id="" title="SEARCH"><i class="fas fa-2x fa-search"></i></button>
             </div>
             <div class="headerDivchild">
                 <button class="tab" id=""></button>
@@ -30,7 +40,7 @@
 
         <div class="bodyDiv">
             <div id="div1" class="bodyDivchild">
-                <h2>My Courses in this quarter</h2>
+                <h2>My Courses</h2>
             </div>
             <div id="div2" class="bodyDivchild">
                 <ul>

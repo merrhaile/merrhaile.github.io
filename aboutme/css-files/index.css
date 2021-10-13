@@ -1,21 +1,20 @@
 
 html{
     background-color:#151B41;
-
 }
 body {
-    padding-top:20px;
+    padding-top:3rem;
 }    
 
+
 #mainDiv {
-    border: 2px solid black;
     border-radius:10px;
-    background-color: #776A43 ;
+    background-color: #88794d ;
     height:100%;
     width:100%;
-    display:flex;
-    flex-direction: row;
-    
+    display:grid;
+    grid-template-columns: 5rem auto;
+    grid-template-rows: 35rem;
 }
 .headerDiv {
     align-self: center;
@@ -50,7 +49,6 @@ body {
 	display: inline-block;
 	font-size: 16px;
 	margin: 4px 2px;
-
 }
 
 .tab:hover {
@@ -63,35 +61,40 @@ body {
     height:100%;
     padding-top:10px;
     display:grid;
-    grid-template-columns: auto auto;
-
-    
+    grid-template-columns: auto auto;  
 }
 
 #div1 {
-    
-    width:350px;
+    width:80%;
     grid-column:1/2;
-    margin-left:250px;
+    margin-left:5rem;
     align-self:center;
-    text-align:left;
+    text-align:center;
    
 }
 #div2 {
-    
-    border-radius: 5%;
+    width:85%;
+    height:85%;
     grid-column:2/3;
-    margin-right:50px;
+    margin-right:11rem;
+    margin-bottom:4rem;
+    align-self:center;
 }
 
-
+h1, h2 {
+    margin: 0.5rem;
+}
 p {
-    
-    height:60px;
-    width:350px;
+    font-size: medium;
+    height:fit-content;
+    width:70%;
+    margin-left:5rem;
     
 }
 
-img {
+.img {
     border-radius: 5%;
+    max-width: 100%;
+    height: auto;
+    display:block;
 }

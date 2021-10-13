@@ -5,21 +5,21 @@
 function toogleTabs (){
     const home = document.getElementById("homeTab");
     home.onclick = function () {
-        location.href = "./index.html";
+        location.href = "../index.html";
     }
 
     const about = document.getElementById("aboutTab");
     about.onclick = function () {
-        location.href = "./about.html";
+        location.href = "../html-files/about.html";
     }
     const project = document.getElementById("projectsTab");
     project.onclick = function () {
-        location.href = "./projects.html";
+        location.href = "../html-files/projects.html";
     }
 
     const courses = document.getElementById("coursesTab");
     courses.onclick = function () {
-        location.href = "./courses.html";
+        location.href = "../html-files/courses.html";
     }
 
 }
