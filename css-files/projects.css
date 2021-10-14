@@ -60,17 +60,17 @@ body {
 .bodyDiv {
     width:80%;
     height:80%;
-    padding: 5rem ;
+    /* padding: 5rem ; */
     display:grid;
-    grid-template-columns:auto;
+    grid-template-columns:auto auto;
     grid-template-rows: 85%;
    
 }
 
 #div1 {
-    /* border:2px solid; */
+    padding: 8rem;
     grid-column:1/2; 
-    align-self: center;
+    /* align-self: center; */
 }
 
 #div2 {
