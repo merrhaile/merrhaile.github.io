@@ -1,0 +1,14 @@
+
+.custom-color1 {
+    background-color: #151B41 ;
+}
+
+.custom-color2 {
+    background-color: #88794d ;
+}
+
+tbody tr:hover {
+    background-color: grey;
+}
+
+

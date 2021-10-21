@@ -1,0 +1,16 @@
+
+body {
+    font-family: sans-serif;
+}
+.custom-color1 {
+    background-color: #151B41 ;
+}
+
+.custom-color2 {
+    background-color: #88794d ;
+}
+
+#myPhoto {
+    width: 23rem;
+    height: 28rem;
+}

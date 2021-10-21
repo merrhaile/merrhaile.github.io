@@ -1,0 +1,64 @@
+
+
+
+.custom-color1 {
+    background-color: #151B41 ;
+}
+
+.custom-color2 {
+    background-color: #88794d ;
+}
+
+.svg {
+    width:auto;
+    height:auto;
+    background-color: lightyellow;
+    padding-top: 3rem;
+}
+
+
+.rect {
+    width: 35rem;
+    height:2.5rem;
+    /* fill:rgb(3, 44, 85); */
+
+}
+
+.line {
+    stroke:red;
+    stroke-width: 0.2rem;
+}
+
+.text {
+    fill:maroon;
+    font-weight: bold;
+}
+
+/* 
+#rect1 {
+    width: 40rem;
+    height:3rem;
+    fill:lightslategrey;
+    
+}
+
+#rect2 {
+    width: 40rem;
+    height:3rem;
+    fill:lightslategrey;
+}
+#rect3 {
+    width: 40rem;
+    height:3rem;
+    fill:lightslategrey;
+}
+#rect4 {
+    width: 40rem;
+    height:3rem;
+    fill:lightslategrey;
+}
+#rect5 {
+    width: 40rem;
+    height:3rem;
+    fill:lightslategrey;
+} */
